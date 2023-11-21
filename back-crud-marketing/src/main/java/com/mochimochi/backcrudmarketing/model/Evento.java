@@ -12,7 +12,7 @@ import lombok.Data;
 @Data
 @Entity(name="eventos")
 @Table(name="eventos")
-public class Evento {
+public class  Evento {
     
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -35,8 +35,11 @@ public class Evento {
     @Column(length = 200, nullable = false)
     private String urlEvento;
 
-    //@Column
-    //private Boolean like = false;
+
+    private Boolean like = false;
+
+    @OneToMany(mappedBy = "comentarios" )
+    private Comentarios comentarios;
 
 
 }

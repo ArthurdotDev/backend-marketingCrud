@@ -12,7 +12,7 @@ public class EventoMapper {
         if (evento == null) {
             return null;
         }
-        return new EventoDTO(evento.getId(), evento.getNome(), evento.getDescricao(), evento.getImg(), evento.getUrlEvento()); //evento.getLike());
+        return new EventoDTO(evento.getId(), evento.getNome(), evento.getDescricao(), evento.getImg(), evento.getUrlEvento(), evento.getLike(), evento.getComentarios());
     }
 
     public Evento toEntity(EventoDTO eventoDTO){
